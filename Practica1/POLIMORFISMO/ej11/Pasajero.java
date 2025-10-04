@@ -6,8 +6,6 @@ public class Pasajero {
     private String genero;
     private int nroHabitacion;
     private double costoPasaje;
-
-    // Constructor
     public Pasajero(String nombre, int edad, String genero, int nroHabitacion, double costoPasaje) {
         this.nombre = nombre;
         this.edad = edad;
@@ -15,15 +13,11 @@ public class Pasajero {
         this.nroHabitacion = nroHabitacion;
         this.costoPasaje = costoPasaje;
     }
-
-    // b) Sobrecarga del operador ++ (simulada) - para leer/entrada
     public void incrementar() {
         System.out.println("Leyendo datos del pasajero: " + this.nombre);
         System.out.println("  Edad: " + edad + ", Género: " + genero);
         System.out.println("  Habitación: " + nroHabitacion + ", Costo: $" + costoPasaje);
     }
-
-    // b) Sobrecarga del operador -- (simulada) - para mostrar/salida
     public void decrementar() {
         System.out.println("=== DATOS DEL PASAJERO ===");
         System.out.println("Nombre: " + nombre);
@@ -31,10 +25,7 @@ public class Pasajero {
         System.out.println("Género: " + genero);
         System.out.println("Habitación: " + nroHabitacion);
         System.out.println("Costo pasaje: $" + costoPasaje);
-        System.out.println("==========================");
     }
-
-    // Getters
     public String getNombre() {
         return nombre;
     }

@@ -4,20 +4,18 @@ import math
 class Matriz:
     TAMANIO = 10
 
-    # a) Constructor para matriz identidad (valores predeterminados)
     def __init__(self, datos=None):
         if datos is None:
-            # Constructor para matriz identidad
             self.matriz = [[0.0] * self.TAMANIO for _ in range(self.TAMANIO)]
-            # Inicializar como matriz identidad
+          
             for i in range(self.TAMANIO):
                 for j in range(self.TAMANIO):
                     if i == j:
-                        self.matriz[i][j] = 1.0  # Diagonal principal = 1
+                        self.matriz[i][j] = 1.0  
                     else:
-                        self.matriz[i][j] = 0.0  # Resto = 0
+                        self.matriz[i][j] = 0.0  
         else:
-            # Constructor para instanciar con matriz específica
+           
             if len(datos) != self.TAMANIO or len(datos[0]) != self.TAMANIO:
                 raise ValueError(f"La matriz debe ser de tamaño {self.TAMANIO}x{self.TAMANIO}")
 
@@ -25,47 +23,35 @@ class Matriz:
             for i in range(self.TAMANIO):
                 for j in range(self.TAMANIO):
                     self.matriz[i][j] = datos[i][j]
-
-    # c) Método para sumar matrices
     def sumar(self, otra):
         resultado = [[0.0] * self.TAMANIO for _ in range(self.TAMANIO)]
         for i in range(self.TAMANIO):
             for j in range(self.TAMANIO):
                 resultado[i][j] = self.matriz[i][j] + otra.matriz[i][j]
         return Matriz(resultado)
-
-    # c) Método para restar matrices
     def restar(self, otra):
         resultado = [[0.0] * self.TAMANIO for _ in range(self.TAMANIO)]
         for i in range(self.TAMANIO):
             for j in range(self.TAMANIO):
                 resultado[i][j] = self.matriz[i][j] - otra.matriz[i][j]
         return Matriz(resultado)
-
-    # d) Método para verificar si dos matrices son iguales
     def igual(self, otra):
         for i in range(self.TAMANIO):
             for j in range(self.TAMANIO):
                 if abs(self.matriz[i][j] - otra.matriz[i][j]) > 0.0001:
                     return False
         return True
-
-    # Método para obtener el valor en una posición específica
     def get(self, fila, columna):
         if fila < 0 or fila >= self.TAMANIO or columna < 0 or columna >= self.TAMANIO:
             raise ValueError("Índices fuera de rango")
         return self.matriz[fila][columna]
-
-    # Método para establecer valor en una posición específica
     def set(self, fila, columna, valor):
         if fila < 0 or fila >= self.TAMANIO or columna < 0 or columna >= self.TAMANIO:
             raise ValueError("Índices fuera de rango")
         self.matriz[fila][columna] = valor
-
-    # Método para mostrar la matriz (solo primeras 4x4 para mejor visualización)
     def mostrar(self):
         print(f"Matriz {self.TAMANIO}x{self.TAMANIO}:")
-        for i in range(min(4, self.TAMANIO)):  # Mostrar solo 4x4 para mejor visualización
+        for i in range(min(4, self.TAMANIO)):  
             for j in range(min(4, self.TAMANIO)):
                 print(f"{self.matriz[i][j]:8.2f}", end="")
             if self.TAMANIO > 4:
@@ -74,8 +60,6 @@ class Matriz:
         if self.TAMANIO > 4:
             print("    ...")
         print()
-
-    # Método para mostrar matriz completa
     def mostrar_completa(self):
         print(f"Matriz completa {self.TAMANIO}x{self.TAMANIO}:")
         for i in range(self.TAMANIO):
@@ -83,8 +67,6 @@ class Matriz:
                 print(f"{self.matriz[i][j]:8.2f}", end="")
             print()
         print()
-
-    # Método para obtener una submatriz 4x4 (para pruebas)
     def mostrar_submatriz_4x4(self):
         print("Submatriz 4x4:")
         for i in range(4):
@@ -92,8 +74,6 @@ class Matriz:
                 print(f"{self.matriz[i][j]:8.2f}", end="")
             print()
         print()
-
-    # Getters
     def get_matriz(self):
         return self.matriz
 

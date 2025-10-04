@@ -44,10 +44,10 @@ public class Parada {
                 }
             }
         }
-        System.out.println(" Vehículos registrados:                                  ");
+        System.out.println(" Vehículos registrados");
         int autosCount = contarAutos();
         if (autosCount == 0) {
-            System.out.println("   No hay vehículos registrados                        ");
+            System.out.println("   No hay vehículos registrados");
         } else {
             for (int i = 0; i < MAX_AUTOS; i++) {
                 if (autos[i][MODELO] != null) {

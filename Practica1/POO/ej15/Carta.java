@@ -26,8 +26,6 @@ public class Carta {
     public String getDestinatario() {
         return destinatario;
     }
-
-    // Setters
     public void setCodigo(String codigo) {
         this.codigo = codigo;
     }

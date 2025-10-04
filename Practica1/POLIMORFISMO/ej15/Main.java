@@ -28,7 +28,7 @@ public class Main {
         System.out.println("\nORDENADORES CON MAS DE 8GB RAM LASIN 1:");
         lasin1.informacion(8);
 
-        System.out.println("\nTRASLADANDO ORDENADORES...");
+        System.out.println("\nTRASLADANDO ORDENADORES");
         System.out.println("Antes: Lasin1=" + lasin1.getCantidadOrdenadores() +
                 ", Lasin2=" + lasin2.getCantidadOrdenadores());
 

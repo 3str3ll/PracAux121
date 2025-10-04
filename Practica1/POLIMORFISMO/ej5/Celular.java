@@ -3,8 +3,8 @@ package Practica1.POLIMORFISMO.ej5;
 public class Celular {
     private String nroTel;
     private String dueño;
-    private double espacio; // en GB
-    private int ram; // en GB
+    private double espacio; 
+    private int ram; 
     private int nroApp;
     public Celular() {
         this.nroTel = "Sin número";
@@ -22,14 +22,14 @@ public class Celular {
     }
     public void incrementarApps() {
         this.nroApp += 10;
-        System.out.println("✓ Se incrementaron las apps en 10");
+        System.out.println(" Se incrementaron las apps en 10");
     }
     public void decrementarEspacio() {
         if (this.espacio >= 5) {
             this.espacio -= 5;
-            System.out.println("✓ Se disminuyó el espacio en 5 GB");
+            System.out.println("Se disminuyó el espacio en 5 GB");
         } else {
-            System.out.println("✗ No hay suficiente espacio para disminuir");
+            System.out.println(" No hay suficiente espacio para disminuir");
         }
     }
     public String getNroTel() {

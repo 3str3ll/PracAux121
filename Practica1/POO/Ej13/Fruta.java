@@ -29,7 +29,7 @@ public class Fruta {
         return nroVitaminas;
     }
     public String[] getVitaminas() {
-        return Arrays.copyOf(v, nroVitaminas); // Retorna solo las vitaminas existentes
+        return Arrays.copyOf(v, nroVitaminas); 
     }
     public void mostrarInformacion() {
         System.out.println("Fruta: " + nombre);

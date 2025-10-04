@@ -1,5 +1,4 @@
 public class Persona {
-    // Atributos de la clase
     private String nombre;
     private String paterno;
     private String materno;
@@ -12,7 +11,6 @@ public class Persona {
         this.edad = edad;
         this.ci = ci;
     }
-    // b) 
     public void mostrarDatos() {
         System.out.println("=== DATOS DE LA PERSONA ===");
         System.out.println("Nombre: " + nombre);
@@ -22,13 +20,9 @@ public class Persona {
         System.out.println("Cédula de Identidad: " + ci);
         System.out.println("Mayor de edad: " + (mayorDeEdad() ? "Sí" : "No"));
     }
-
-    // c) 
     public boolean mayorDeEdad() {
         return edad >= 18;
-    }
-
-    // d) 
+    } 
     public void modificarEdad(int nuevaEdad) {
         if (nuevaEdad >= 0 && nuevaEdad <= 150) {
             this.edad = nuevaEdad;
@@ -37,8 +31,6 @@ public class Persona {
             System.out.println("Error: La edad debe estar entre 0 y 100 años");
         }
     }
-
-    // e) 
     public boolean mismoPaterno(Persona otraPersona) {
         return this.paterno.equalsIgnoreCase(otraPersona.paterno);
 

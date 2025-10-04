@@ -37,12 +37,6 @@ public class Bus {
         int disponibles = capacidadMaxima - cantPasajeros;
         System.out.println("Asientos disponibles: " + disponibles + " de " + capacidadMaxima);
     }
-    public void mostrarInformacion() {
-        System.out.println("\nINFORMACIÓN DEL BUS ");
-        System.out.println("Pasajeros actuales: " + cantPasajeros);
-        System.out.println("Capacidad máxima: " + capacidadMaxima);
-        System.out.println("Total recaudado: Bs. " + totalRecaudado);
-        mostrarAsientosDisponibles();
-    }
+    
 
 }

@@ -30,7 +30,7 @@ public class Videojuego {
     public void agregarJugadores(Scanner scanner) {
         System.out.print("Ingrese la cantidad de jugadores a agregar para '" + nombre + "': ");
         int cantidad = scanner.nextInt();
-        scanner.nextLine(); // Limpiar buffer
+        scanner.nextLine(); 
 
         if (cantidad > 0) {
             this.cantidadJugadores += cantidad;
@@ -77,7 +77,7 @@ public class Videojuego {
     @Override
     public String toString() {
         return "Videojuego: " + nombre +
-                " | Plataforma: " + plataforma +
-                " | Jugadores: " + cantidadJugadores;
+                "  Plataforma: " + plataforma +
+                " Jugadores: " + cantidadJugadores;
     }
 }

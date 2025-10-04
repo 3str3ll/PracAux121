@@ -23,11 +23,9 @@ public class Main {
         System.out.println("\n   - Celular 2: ++ dos veces");
         celular2.incrementarApps();
         celular2.incrementarApps();
-        System.out.println("\n--- DESPUÉS de aplicar operadores ---");
+        System.out.println("\n DESPUÉS de aplicar operadores ");
         celular1.mostrarDatos();
         celular2.mostrarDatos();
-        System.out.println("\n=== RESUMEN DE CAMBIOS ===");
-        System.out.println("==========================\n");
         Celular celularOriginal1 = new Celular("+51 987654321", "Juan Pérez", 128.0, 8, 25);
         Celular celularOriginal2 = new Celular("+51 912345678", "María García", 64.0, 6, 15);System.out.println("COMPARACIÓN CELULAR 1:");
         System.out.println("Inicial:  " + celularOriginal1.toString());
@@ -42,15 +40,13 @@ public class Main {
         System.out.printf ("Cambios:  +%d apps, -%.1fGB espacio\n",
                 (celular2.getNroApp() - celularOriginal2.getNroApp()),
                 (celularOriginal2.getEspacio() - celular2.getEspacio()));
-        System.out.println("\n=== PRUEBA DE VALIDACIÓN ===");
-        System.out.println("============================\n");
 
         Celular celular3 = new Celular("+51 999888777", "Carlos López", 3.0, 4, 8);
         System.out.println("Celular con espacio limitado:");
         celular3.mostrarDatos();
 
         System.out.println("\nIntentando decrementar espacio (--):");
-        celular3.decrementarEspacio(); // No debería permitir
+        celular3.decrementarEspacio(); 
         celular3.mostrarDatos();
     }
 }

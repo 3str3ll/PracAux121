@@ -75,7 +75,7 @@ public class Laboratorio {
         }
     }
     public void informacion(int ramMinima) {
-        System.out.printf ("║    ORDENADORES CON +%dGB RAM - %-20s        ║\n", ramMinima, nombre);
+        System.out.printf ("   ORDENADORES CON +%dGB RAM - %-20s   \n", ramMinima, nombre);
 
 
         List<Ordenador> filtrados = new ArrayList<>();

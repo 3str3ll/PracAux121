@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Sistema de correo\n");
 
-        // b)
         Carta carta1 = new Carta("C123",
                 "Querido amigo te escribo para decirte que ella no te ama por lo tanto debes seguir adelante con tu vida. El amor verdadero llegará cuando menos lo esperes pero con ella no lo encontraste xd.",
                 "Juan Álvarez", "Peter Chaves");
@@ -34,7 +33,6 @@ public class Main {
         carta1.mostrarInformacion();
         carta2.mostrarInformacion();
         carta3.mostrarInformacion();
-        // a)
         Buzon buzon1 = new Buzon(1);
         Buzon buzon2 = new Buzon(2);
         Buzon buzon3 = new Buzon(3);
@@ -50,19 +48,15 @@ public class Main {
         buzon1.mostrarInformacion();
         buzon2.mostrarInformacion();
         buzon3.mostrarInformacion();
-        // c)
+
         System.out.println("\ncantida de artas recibidas");
         String destinatarioBuscado = "Pepe Mujica";
         System.out.println("Cartas recibidas por " + destinatarioBuscado + ":");
         System.out.println("Buzón 1: " + buzon1.cartasRecibidasPor(destinatarioBuscado));
         System.out.println("Buzón 2: " + buzon2.cartasRecibidasPor(destinatarioBuscado));
-        System.out.println("Buzón 3: " + buzon3.cartasRecibidasPor(destinatarioBuscado));
-        // d)
         System.out.println("\neliminacion por codigo");
         buzon1.eliminarCartaPorCodigo("C123");
         buzon1.mostrarInformacion();
-
-        // e)
         System.out.println("\nverificacion ");
         System.out.println("Buzón 1:");
         for (String resultado : buzon1.remitentesQueRecibieronCartas()) {
@@ -78,8 +72,6 @@ public class Main {
         for (String resultado : buzon3.remitentesQueRecibieronCartas()) {
             System.out.println("  " + resultado);
         }
-
-        // f), g)
         System.out.println("\nbusqueda");
         String palabraClave = "amor";
         buzon1.buscarPalabraEnDescripciones(palabraClave);

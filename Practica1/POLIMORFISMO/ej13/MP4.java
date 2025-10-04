@@ -4,7 +4,7 @@ public class MP4 {
     private String marca;
     private double capacidadGB;
     private int cantCanciones;
-    private String[][][] canciones; // [3][100][3] - nombre, artista, peso
+    private String[][][] canciones;
     private int cantVideos;
     private String[][][] videos;
     private static final int NOMBRE = 0;
@@ -58,15 +58,13 @@ public class MP4 {
         System.out.println(" Canción '" + nombre + "' no encontrada");
         return false;
     }
-
-    // 2. Borrar por artista
     public boolean borrarCancion(String artista, boolean porArtista) {
         int eliminadas = 0;
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 100; j++) {
                 if (canciones[i][j][ARTISTA] != null &&
                         canciones[i][j][ARTISTA].equalsIgnoreCase(artista)) {
-                    // Eliminar la canción
+                    
                     canciones[i][j][NOMBRE] = null;
                     canciones[i][j][ARTISTA] = null;
                     canciones[i][j][PESO] = null;
@@ -93,7 +91,7 @@ public class MP4 {
                     canciones[i][j][ARTISTA] = null;
                     canciones[i][j][PESO] = null;
                     cantCanciones--;
-                    System.out.println("✅ Canción '" + nombre + "' (" + peso + "KB) eliminada");
+                    System.out.println(" Canción '" + nombre + "' (" + peso + "KB) eliminada");
                     return true;
                 }
             }
@@ -102,7 +100,6 @@ public class MP4 {
         return false;
     }
     public boolean agregarCancion(String nombre, String artista, double pesoKB) {
-        // Verificar si ya existe
         if (existeCancion(nombre, artista)) {
             System.out.println(" La canción '" + nombre + "' de " + artista + " ya existe");
             return false;

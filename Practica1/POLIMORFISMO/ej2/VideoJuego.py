@@ -14,13 +14,11 @@ class Videojuego:
 
     def agregar_jugadores(self, cantidad=None, scanner=None):
         if cantidad is None and scanner is None:
-            # Método sin parámetros - agregar 1 jugador
             self.cantidad_jugadores += 1
             print(f"Se agregó 1 jugador al videojuego: {self.nombre}")
             print(f"Total de jugadores: {self.cantidad_jugadores}")
 
         elif scanner is not None:
-            # Método con scanner - entrada por teclado
             try:
                 cantidad_input = int(input(f"Ingrese la cantidad de jugadores a agregar para '{self.nombre}': "))
                 if cantidad_input > 0:
@@ -33,7 +31,6 @@ class Videojuego:
                 print("Error: Debe ingresar un número válido")
 
         elif cantidad is not None:
-            # Método con cantidad específica
             if cantidad > 0:
                 self.cantidad_jugadores += cantidad
                 print(f"Se agregaron {cantidad} jugadores al videojuego: {self.nombre}")
@@ -60,8 +57,6 @@ class Videojuego:
 
     def __str__(self):
         return f"Videojuego: {self.nombre} | Plataforma: {self.plataforma} | Jugadores: {self.cantidad_jugadores}"
-
-
 print("Creando videojuegos")
 juego1 = Videojuego("FIFA 24", "PlayStation 5", 2)
 print(f"1. {juego1}")
