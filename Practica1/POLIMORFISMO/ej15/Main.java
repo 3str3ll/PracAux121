@@ -40,7 +40,6 @@ public class Main {
             if (aTrasladar != null && lasin2.tieneEspacio()) {
                 lasin1.removerOrdenador(primerSerial);
                 lasin2.agregarOrdenador(aTrasladar);
-                System.out.println("Trasladado: " + aTrasladar.infoBreve());
             }
         }
 

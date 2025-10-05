@@ -49,8 +49,6 @@ public class Videojuego {
             System.out.println("La cantidad debe ser mayor a 0");
         }
     }
-
-    // Getters y Setters
     public String getNombre() {
         return nombre;
     }

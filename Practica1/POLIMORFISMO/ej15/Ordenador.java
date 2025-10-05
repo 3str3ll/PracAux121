@@ -34,7 +34,4 @@ public class Ordenador {
         return String.format("Serial: %s  N°: %d  RAM: %dGB  CPU: %-12s  %s Lab: %s",
                 codigoSerial, numero, memoriaRAM, procesador, estadoStr, laboratorioAsignado);
     }
-    public String infoBreve() {
-        return String.format("%s (N°%d - %dGB)", codigoSerial, numero, memoriaRAM);
-    }
 }

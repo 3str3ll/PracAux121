@@ -69,10 +69,8 @@ public class Crucero {
         System.out.println("Hombres: " + hombres);
         System.out.println("Mujeres: " + mujeres);
         System.out.println("Total: " + (hombres + mujeres));
-        System.out.println("===============================");
     }
 
-    // Método para agregar pasajeros
     public boolean agregarPasajero(Pasajero pasajero) {
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS; j++) {
