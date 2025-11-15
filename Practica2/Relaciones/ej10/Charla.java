@@ -2,7 +2,7 @@ package Practica2.Relaciones.ej10;
 import java.util.ArrayList;
 public class Charla {
     private String titulo;
-    private int duracion; s
+    private int duracion; 
     private String sala;
     private String horaInicio;
     private int capacidadMaxima;

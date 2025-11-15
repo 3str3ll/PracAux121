@@ -1,7 +1,7 @@
 package Practica2.Relaciones.ej10;
 public class Main {
     public static void main(String[] args) {
-        System.out.println("🎤 SISTEMA COMPLETO DE GESTIÓN DE EVENTOS\n");
+        System.out.println(" SISTEMA COMPLETO DE GESTIÓN DE EVENTOS\n");
         Evento evento = new Evento("Tech Conference 2025", "2025-03-15", "Centro de Convenciones", "UMSA",    "Conferencia anual de tecnología e innovación");
         Speaker speaker1 = new Speaker("Juan", "Pérez", "1111111", 35,  "juan@tech.com", "777111222", "Inteligencia Artificial", 10);
         Speaker speaker2 = new Speaker("María", "Gómez", "2222222", 28,    "maria@tech.com", "777333444", "Blockchain", 6);
