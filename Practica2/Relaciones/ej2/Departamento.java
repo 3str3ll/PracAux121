@@ -1,3 +1,4 @@
+package Practica2.ej2;
 import java.util.ArrayList;
 public class Departamento {
     private String nombre;
@@ -46,3 +47,4 @@ public class Departamento {
 
     public ArrayList<Empleado> getEmpleados() { return empleados; }
 }
+

@@ -1,3 +1,4 @@
+package Practica2.ej2;
 public class Main {
     public static void main(String[] args) {
         System.out.println("SISTEMA DE GESTIÓN DE DEPARTAMENTOS\n");

@@ -1,3 +1,4 @@
+package Practica2.ej2;
 public class Empleado {
     private String nombre;
     private String puesto;
