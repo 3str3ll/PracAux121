@@ -1,6 +1,6 @@
 package Practica2.Excepciones.ej2;
 
-public  class Calcula {
+public  class Calculadora {
     
     public static double dividir(double a, double b) throws ArithmeticException {
         if (b == 0) {

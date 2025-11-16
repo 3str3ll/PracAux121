@@ -36,15 +36,11 @@ package Practica2.Excepciones.ej6;
         
         System.out.println("=== SISTEMA BANCARIO ===");
         cuenta.mostrarInfo();
-        
-        // Prueba 1: Depósito válido
         try {
             cuenta.depositar(500);
         } catch (IllegalArgumentException e) {
             System.out.println("Error en depósito: " + e.getMessage());
         }
-        
-        // Prueba 2: Depósito inválido
         try {
             cuenta.depositar(-100);
         } catch (IllegalArgumentException e) {
@@ -52,15 +48,11 @@ package Practica2.Excepciones.ej6;
         }
         
         cuenta.mostrarInfo();
-        
-        // Prueba 3: Retiro válido
         try {
             cuenta.retirar(300);
         } catch (FondosInsuficientesException e) {
             System.out.println("Error en retiro: " + e.getMessage());
         }
-        
-        // Prueba 4: Retiro inválido
         try {
             cuenta.retirar(2000);
         } catch (FondosInsuficientesException e) {
@@ -68,8 +60,6 @@ package Practica2.Excepciones.ej6;
         }
         
         cuenta.mostrarInfo();
-        
-        // Prueba final: Operaciones exitosas
         try {
             cuenta.depositar(200);
             cuenta.retirar(100);
